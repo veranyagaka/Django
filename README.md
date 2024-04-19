@@ -14,3 +14,14 @@ python manage.py runserver 9191
 
 -----
 django-admin startapp (whatevername)
+####
+cd hellovera
+source bin/activate
+python manage.py runserver
+http://127.0.0.1:8000/admin
+
+Create migrations:
+python manage.py makemigrations
+
+Apply migrations:
+python manage.py migrate
