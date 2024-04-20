@@ -25,3 +25,6 @@ python manage.py makemigrations
 
 Apply migrations:
 python manage.py migrate
+
+##Database#
+-model, urls, views, settings, migrations, templates
