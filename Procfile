@@ -1,0 +1,1 @@
+web: gunicorn VERA.templates.task_list --log-file-
