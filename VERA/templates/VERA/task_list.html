@@ -18,8 +18,14 @@
         </form>
         <ul>
             {% for task in tasks %}
-            <li>{{task.title}}<a href = "{%url 'delete_task' task.id%}">Delete</a></li>
+            <li>{{task.title}}<a href = "{%url 'delete_task' task.id%}"> Delete</a></li>
             {% endfor %}
         </ul>
+        <h2>This is a sample of how to use APIs</h2>
+        {{result}}
+        <h3>Random Pet</h3>
+        {{result2}}
+        <img src= '{{result2}}' alt ='Random pet'> 
+
     </body>
 </html>
