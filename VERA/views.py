@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse,JsonResponse
 from .models import Task
 import requests
 
@@ -20,15 +20,10 @@ def delete_task(request, task_id):
 
 def hello(request):
     return HttpResponse("Hello Vera! Welcome to Django Website")
+def chuck_norris_joke(request):
+    url = "https://api.chucknorris.io/jokes/random"
+    response = requests.get(url)
+    data = response.json()
+    return JsonResponse(data)
 
-def home(request):
-  #using api
-  response = requests.get('https://api.github.com/events')
-  data = response.json()
-  result = data[0]["id"]
-  #result = data[0]["repo"]
-  #Response 2
-  response2 = requests.get('https://dog.ceo/api/breeds/image/random')
-  data2 = response2.json()
-  result2 = data2['message']
-  return render(request, 'templates/index.html', {'result': result, 'result2': result2})
+    
