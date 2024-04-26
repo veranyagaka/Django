@@ -1,1 +1,1 @@
-web: gunicorn VERA.templates.task_list --log-file-
+web: gunicorn VERA.templates.task_list.wsgi:application --bind 0.0.0.0:$PORT
