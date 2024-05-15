@@ -28,3 +28,7 @@ python manage.py migrate
 
 ##Database#
 -model, urls, views, settings, migrations, templates
+# polls
+    $ python manage.py startapp polls
+      urls.py
+    path("polls/", include("polls.urls")),
