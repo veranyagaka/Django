@@ -23,4 +23,5 @@ urlpatterns = [
     path("polls/", include("polls.urls")),
     path('',include('VERA.urls')),
     #path('', include('todo_list.urls'))
+    path('api/', include('api.urls')),
 ]
